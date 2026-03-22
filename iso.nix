@@ -27,7 +27,7 @@ stdenv.mkDerivation {
     cat > iso-root/boot/grub/grub.cfg <<EOF
     set timeout=5
     set default=0
-    menuentry "GlacierOS Installer" {
+    menuentry "${volumeID} Live" {
         linux /boot/bzImage init=$toplevel/init boot.shell_on_fail
         initrd /boot/initrd
     }
