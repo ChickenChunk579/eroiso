@@ -22,7 +22,7 @@
       inherit nixosSystem;
       iso = pkgs.callPackage ./iso.nix {
         inherit toplevel volumeID;
-        inherit (pkgs) erofs-utils grub2 xorriso coreutils closureInfo;
+        inherit (pkgs) erofs-utils grub2 grub2_efi xorriso coreutils closureInfo mtools;
       };
     };
 
